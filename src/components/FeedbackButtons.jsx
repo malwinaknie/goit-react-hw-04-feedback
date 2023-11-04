@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-export const FeedbackButtons = ({options, counter}) => {
+export const FeedbackOptions = ({options, onLeaveFeedback}) => {
     return (
         <div>
             {options.map(option => (
                 <button
                 key={option}
                 type="button"
-                onClick={() => counter(option)}>
+                onClick={() => onLeaveFeedback(option)}>
                     {option}
                 </button>
             ))}
@@ -16,7 +16,7 @@ export const FeedbackButtons = ({options, counter}) => {
     )
 }
 
-FeedbackButtons.propTypes = {
+FeedbackOptions.propTypes = {
     options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-    counter: PropTypes.func.isRequired,
+    onLeaveFeedback: PropTypes.func.isRequired,
 }
