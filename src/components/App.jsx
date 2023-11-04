@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { FeedbackButtons } from './FeedbackButtons';
+import { Statistics } from './Statistics';
 
 export class App extends Component {
 
@@ -44,11 +45,24 @@ render() {
       color: '#010101',
       gap: 10,
     }}>
+      <div>
       <h4>Please leave feedback</h4>
       <FeedbackButtons
       counter={this.counter}
       options={options}>
       </FeedbackButtons>
+      </div>
+      <div>
+        <h4>Statistics</h4>
+          <Statistics
+          good={good}
+          neutral={neutral}
+          bad={bad}
+          total={totalFeedback}
+          positiveFeedback={positiveFeedback}
+          >
+          </Statistics>
+      </div>
     </div>
   )
 }
