@@ -1,0 +1,16 @@
+.option-button {
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    width: 100px;
+    margin-right: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover,
+    &:active,
+    &:focus {
+    background-color: #3737655d;
+    transition: 0.3s;
+    }
+}

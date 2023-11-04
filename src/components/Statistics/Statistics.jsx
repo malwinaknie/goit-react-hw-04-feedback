@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types'
+import styles from './Statistics.module.css'
 
 export const Statistics = ({
     good,
@@ -9,7 +10,7 @@ export const Statistics = ({
     positivePercentage,
 }) => {
     return (
-        <ul>
+        <ul className={(styles["list"])}>
             <li>Good: {good}</li>
             <li>Neutral: {neutral}</li>
             <li>Bad: {bad}</li>
